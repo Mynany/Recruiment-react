@@ -52,14 +52,14 @@ class Register extends React.Component{
                     >Confirm Password</InputItem>
                     <WhiteSpace />
                     <RadioItem 
-                        checked={this.state.type==='Jobseeker'}
-                        onChange={()=>this.handleChange('type','Jobseeker')}
+                        checked={this.state.type==='jobseeker'}
+                        onChange={()=>this.handleChange('type','jobseeker')}
                     >Jobseeker
                     </RadioItem>
                     <WhiteSpace />
                     <RadioItem 
-                        checked={this.state.type==='Employer'}
-                        onChange={()=>this.handleChange('type','Employer')}
+                        checked={this.state.type==='employer'}
+                        onChange={()=>this.handleChange('type','employer')}
                     >Employer
                     </RadioItem>
                     <WhiteSpace />

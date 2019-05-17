@@ -12,11 +12,13 @@ import Login from './container/login/login'
 import Register from './container/register/register'
 import EmployerInfo from './container/employerinfo/employerinfo'
 import JobseekerInfo from './container/jobseekerinfo/jobseekerinfo'
+import Dashboard from './component/dashboard/dashboard'
 import AuthRoute from './component/authroute/authroute'
 const store = createStore(reducers, compose(
     applyMiddleware(thunk),
     window.devToolsExtension?window.devToolsExtension():f=>f
 ))
+
 
 ReactDom.render(
     (<Provider store={store}>
@@ -28,6 +30,8 @@ ReactDom.render(
                     <Route path="/employerinfo" component={EmployerInfo} />
                     <Route path="/login" exact component={Login}></Route>
                     <Route path="/register" component={Register}></Route>
+
+                    <Route component={Dashboard}></Route>
                 </Switch>
                 
             </div>
