@@ -5,15 +5,11 @@ import {Switch, Route} from 'react-router-dom'
 import NavLinkBar from '../../component/navlink/navlink'
 import Employer from '../../component/employer/employer'
 import Jobseeker from '../../component/jobseeker/jobseeker'
-
-
+import User from '../user/user'
 function Msg(){
     return <h2>Message page</h2>
 }
 
-function User(){
-    return <h2>User page</h2>
-}
 @connect (
     state=>state
 )
@@ -56,7 +52,7 @@ class Dashboard extends React.Component{
         ]
         return(
             <div>
-				<NavBar className='fixd-header' mode='dard'>{navList.find(v=>v.path==pathname).title}</NavBar>
+				<NavBar className='fixd-header' mode='dark'>{navList.find(v=>v.path==pathname).title}</NavBar>
 				<div style={{marginTop:45}}>
 						<Switch>
 							{navList.map(v=>(
